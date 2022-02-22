@@ -1,0 +1,91 @@
+% document class and page style
+\documentclass[a4paper,12pt]{article}
+\usepackage{curriculum}
+
+\begin{document}
+  %---------------------------------------------------------------------
+  % template hack
+  %---------------------------------------------------------------------
+  \titlespacing{\section}{0pt}{1.6em}{0.8em}
+
+  %---------------------------------------------------------------------
+  % acronyms and abbreviations
+  %---------------------------------------------------------------------
+  \def\XXX{Project XXX}
+  \def\XXXurl{\href{http://www.xxx.eu/}{XXX}}
+
+  %---------------------------------------------------------------------
+  % name and contact information
+  %---------------------------------------------------------------------
+  \name{Rafael A.}%
+  \surname{Rojas C.}%
+  \address{Via Cesare Battisti 38, Bolzano}
+  \birthdate{April 16, 1984}%
+  \citizenship{Italian and Venezuelan}%
+  \phone{+39 388 348 95 33}%
+  \email{rafaelrojasmiliani@gmail.com}%
+  \makecontact%
+
+  %---------------------------------------------------------------------
+  % Summary
+  %---------------------------------------------------------------------
+  \addsummary{MSc in Mechanical Engineering, Sapienza University, 2013.}%
+  \addsummary{PhD in Applied and Theoretical Mechanics, Sapienza University, 2016.}%
+  \addsummary{Github \url{https://github.com/rafaelrojasmiliani}}%
+  \addsummary{Research interests:\ control, optimization and planning for robotics.}%
+  \addsummary{Experience with several robotics platforms: Kuka, adept/omron, Universal Robots and ROS.}%
+  \addsummary{Solid background in scientific programming, algorithms and optimization.}%
+  \addsummary{Solid background in automation, control and IoT.}%
+  \makesummary%
+
+  %---------------------------------------------------------------------
+  % work experience
+  %---------------------------------------------------------------------
+  \input{01_work}%
+  \makework%
+
+  %---------------------------------------------------------------------
+  % education
+  %---------------------------------------------------------------------
+  \pagebreak
+  \input{02_education}%
+  \makestudy%
+
+  %---------------------------------------------------------------------
+  % publications and patents
+  %---------------------------------------------------------------------
+  \input{03_dissemination}%
+  %\makepatent%
+  \makepublication%
+
+  %---------------------------------------------------------------------
+  % academic experience
+  %---------------------------------------------------------------------
+  \input{04_academic}%
+  \addacademic{\maketeaching}%
+  \addacademic{\makevisit}%
+  %\addacademic{\makeschool}%
+  \addacademic{\makehonour}%
+  %\addacademic{\makepublication}% template hack: {\pagebreak\makepublication}
+  % \begingroup%
+    % \def\section#1{\vspace{2em}}% template hack
+    % \makeatletter%
+      % \def\@school@b#1;#2;#3;#4;{{\em\ignorespaces#2}, \ignorespaces#1.}% template hack
+    % \makeatother%
+    % \makeacademic%
+  % \endgroup%
+  \makeacademic%
+
+  %---------------------------------------------------------------------
+  \newpage
+  % personal skills
+  %---------------------------------------------------------------------
+  \input{05_skills}%
+  \makeskill%
+
+  %---------------------------------------------------------------------
+  % signature
+  %---------------------------------------------------------------------
+  \vspace{3em}%
+  %\par\centering\includegraphics[scale=0.96]{../my/signature.png}\par%
+\end{document}
