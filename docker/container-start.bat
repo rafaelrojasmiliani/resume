@@ -8,6 +8,4 @@ docker run -it ^
         --env="DISPLAY=%xserverip%:0.0" ^
         --entrypoint="/bin/bash" ^
         "rafa606/vim-with-latex" -c "addgroup --gid 11021 %USERNAME% --force-badname;  adduser --gecos \"\" --disabled-password  --uid 11021 --gid 11021 %USERNAME% --force-badname --home /home/%USERNAME%; install -d -m 0755 -o %USERNAME% -g 11021 /home/%USERNAME% &&\;  usermod -a -G video %USERNAME%; echo %USERNAME% ALL=\(ALL\) NOPASSWD:ALL >> /etc/sudoers; sudo -EHu %USERNAME%  bash"
-}
 
-main
