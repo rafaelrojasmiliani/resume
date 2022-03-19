@@ -31,9 +31,12 @@ jobs:
           pdflatex 00_curriculum.tex
           pdflatex 00_curriculum.tex
         if: steps.changed-files-specific.outputs.any_changed == 'true'
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/') &&
-            steps.changed-files-specific.outputs.any_changed == 'true'
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          files: src/00_currisulum.pdf
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: src/00_curriculum.pdf
+          asset_name: Resume
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "This is my Resume"
