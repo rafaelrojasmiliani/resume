@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 2
 
       - name: Get changed files using defaults
-        id: changed-files-specific.outputs
+        id: changed-files-specific
         uses: tj-actions/changed-files@v17.2
         with:
           files: |
