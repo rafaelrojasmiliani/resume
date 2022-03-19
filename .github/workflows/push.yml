@@ -40,3 +40,4 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           body: "This is my Resume"
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
