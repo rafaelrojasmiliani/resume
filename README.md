@@ -1,3 +1,4 @@
+![example workflow](https://github.com/rafaelrojasmiliani/resume/actions/workflows/push/badge.svg)
 # My Resume
 This repository contains my personal resume.
 
