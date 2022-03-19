@@ -1,4 +1,4 @@
-name: deploy
+name: Resume Compilation
 on: push
 jobs:
   deploy:
