@@ -1,6 +1,7 @@
 ![example workflow](https://github.com/rafaelrojasmiliani/resume/actions/workflows/push.yml/badge.svg)
 # My Resume
 This repository contains my personal resume.
+- You can download it from [here](https://github.com/rafaelrojasmiliani/resume/releases/download/master/Resume.pdf)
 
 ## Highlights
 - Universidad Central de Venezuela
