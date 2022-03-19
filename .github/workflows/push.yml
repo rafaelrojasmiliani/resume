@@ -22,6 +22,7 @@ jobs:
 
       - name: Build pdf and push
         run: |
+          apt-get install lmodern
           cd src
           pdflatex 00_curriculum.tex
           pdflatex 00_curriculum.tex
