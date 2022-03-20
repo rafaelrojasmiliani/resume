@@ -16,6 +16,6 @@ This repository contains my personal resume.
     - Architecture
 - Robotics platforms: Kuka, adept/omron, Universal Robots and Franka
 - ROS1 and ROS2, MoveIT.
-- CI/CD: Jenkins, Github Actions, Aptly
+- CI/CD: Dockers Jenkins, Github Actions, Aptly
 
 
