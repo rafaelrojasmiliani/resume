@@ -37,7 +37,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: src/00_curriculum.pdf
           asset_name: Resume.pdf
-          tag: ${{ github.ref }}
+          tag: file
           overwrite: true
           body: "This is my Resume"
         if: steps.changed-files-specific.outputs.any_changed == 'true'
