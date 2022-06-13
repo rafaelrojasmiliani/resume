@@ -11,10 +11,10 @@ jobs:
       volumes:
         - ${{ github.workspace }}:/workdir
     steps:
-#      - name: checkout code
-#        uses: actions/checkout@master
-#        with:
-#          fetch-depth: 2
+      - name: checkout code
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
 #
 #      - name: Get changed files using defaults
 #        id: changed-files-specific
