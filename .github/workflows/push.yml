@@ -11,18 +11,18 @@ jobs:
       volumes:
         - ${{ github.workspace }}:/workdir
     steps:
-      - name: checkout code
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 2
-
-      - name: Get changed files using defaults
-        id: changed-files-specific
-        uses: tj-actions/changed-files@v23
-        with:
-          files: |
-            src/*.tex
-
+#      - name: checkout code
+#        uses: actions/checkout@master
+#        with:
+#          fetch-depth: 2
+#
+#      - name: Get changed files using defaults
+#        id: changed-files-specific
+#        uses: tj-actions/changed-files@v23
+#        with:
+#          files: |
+#            src/*.tex
+#
       - name: Build pdf and push
         run: |
           apt-get install lmodern
@@ -30,7 +30,7 @@ jobs:
           pdflatex 00_curriculum.tex
           pdflatex 00_curriculum.tex
           pdflatex 00_curriculum.tex
-        if: steps.changed-files-specific.outputs.any_changed == 'true'
+#        if: steps.changed-files-specific.outputs.any_changed == 'true'
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -40,4 +40,4 @@ jobs:
           tag: file
           overwrite: true
           body: "This is my Resume"
-        if: steps.changed-files-specific.outputs.any_changed == 'true'
+#        if: steps.changed-files-specific.outputs.any_changed == 'true'
